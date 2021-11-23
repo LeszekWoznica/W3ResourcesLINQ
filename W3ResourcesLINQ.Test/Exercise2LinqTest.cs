@@ -21,7 +21,7 @@ namespace W3ResourcesLINQ.Test
             IEnumerable<int> result = actual.Method1();
             foreach (var item in expected)
             {
-                Assert.AreEqual(((IEnumerable<int>)expected).Where(a => a == item), result.Where(a => a == item));
+                Assert.AreEqual(expected.Where(a => a == item), result.Where(a => a == item));
             }
         }
 
@@ -35,7 +35,8 @@ namespace W3ResourcesLINQ.Test
             IEnumerable<int> result = actual.Method2();
             foreach (var item in expected)
             {
-                Assert.AreEqual(((IEnumerable<int>)expected).Where(a => a == item), result.Where(a => a == item));
+                //Assert.AreEqual(((IEnumerable<int>)expected).Where(a => a == item), result.Where(a => a == item));
+                Assert.AreEqual(expected.Where(a => a == item), result.Where(a => a == item));
             }
         }
     }

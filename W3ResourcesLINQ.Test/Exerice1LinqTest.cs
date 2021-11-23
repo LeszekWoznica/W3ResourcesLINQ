@@ -19,7 +19,7 @@ namespace W3ResourcesLINQ.Test
             IEnumerable<int> data = actual.Method1();
             for (int i = 0; i < result.Length; i++)
             {
-                Assert.AreEqual(((IEnumerable<int>)result).Where(a => a == result[i]), data.Where(a => a == result[i]));
+                Assert.AreEqual(result.Where(a => a == result[i]), data.Where(a => a == result[i]));
             }
         }
 
@@ -32,7 +32,7 @@ namespace W3ResourcesLINQ.Test
             IEnumerable<int> result = actual.Method2();
             for (int i = 0; i < expected.Length; i++)
             {
-                Assert.AreEqual(((IEnumerable<int>)expected).Where(a => a == expected[i]), result.Where(a => a == expected[i]));
+                Assert.AreEqual(expected.Where(a => a == expected[i]), result.Where(a => a == expected[i]));
             }
         }
     }
